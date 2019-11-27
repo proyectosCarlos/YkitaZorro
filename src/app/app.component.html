@@ -3,17 +3,17 @@
             <div class="logo">
               
               <div class="marca">
-                <h1>HOLA</h1>
+                <a href=""> <img src="../assets/yk.png" alt=""> </a>              
               </div>
 
               <div class="redes">
-                <a href="">  <i class="icono" nz-icon nzType="instagram"></i></a>
 
-                <a href=""> <i class="icono" nz-icon [nzIconfont]="'icon-facebook'"></i> </a>
+                <a class="raise" style="padding-left: 25px;" href="" nzTooltipTitle="instagram" nzTooltipPlacement="topLeft" nz-tooltip><i class="icono" nz-icon nzType="instagram"></i></a>
 
-                <a href=""> <i class="icono" nz-icon [nzIconfont]="'icon-twitter'"></i>  </a>            
-                 
-                           
+                <a class="raise" style="padding-left: 25px;" href=""  nzTooltipTitle="facebook" nzTooltipPlacement="topLeft" nz-tooltip> <i class="icono" nz-icon [nzIconfont]="'icon-facebook'"></i> </a>   
+
+                <a class="raise" style="padding-left: 25px;" nzTooltipTitle="dejame tu comentario" nzTooltipPlacement="topLeft" nz-tooltip (click)="showModal()"> <i class="icono" nz-icon nzType="mail" nzTheme="fill"></i> </a>         
+           
               </div>
 
             </div>
@@ -23,23 +23,28 @@
                 <ul class="lista" nz-menu nzMode="horizontal">
                     <li nz-menu-item >
                       <i nz-icon nzType="fire"></i>
-                      Todos
+                      <strong>Todos</strong>                      
                     </li>  
                     
                     <li nz-menu-item >
                       <i nz-icon nzType="smile"></i>
-                      Trenzas
+                      <strong>Trenzas</strong>    
                     </li>    
 
                     <li nz-menu-item >
                       <i nz-icon nzType="alert"></i>
-                      Colores
+                      <strong>Colores</strong>    
                     </li>    
 
                     <li nz-menu-item >
                       <i nz-icon nzType="like"></i>
-                      Mas puntuados
+                      <strong>Favoritos</strong>    
                     </li>    
+
+                    <li nz-menu-item  (click)="open()">
+                        <i nz-icon nzType="message"></i>
+                        <strong>Comentarios</strong>                      
+                    </li> 
            
                 </ul>
 
@@ -110,23 +115,59 @@
                           <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
                         </ng-template>
             
-
-
-            
-
-      
-
-                          
+           
                      
         </div>
 
         <nz-back-top></nz-back-top>
      
         <div class="footer">
-           
+         © 2019 Copyright carlos yk
+                     
         </div>
 
+        <nz-modal [(nzVisible)]="isVisible" nzTitle="Comentario" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+            <nz-comment>
+                <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]="user.avatar"></nz-avatar>
+                <nz-comment-content>
+                  <nz-form-item>
+                    <textarea  nz-input rows="4"></textarea>
+                  </nz-form-item>             
+                </nz-comment-content>
+              </nz-comment>
+          </nz-modal>
+
+
+          <nz-drawer
+          [nzClosable]="false"
+          [nzVisible]="visible"
+          [nzPlacement]="placement"
+          nzTitle="Comentarios"
+          (nzOnClose)="close()"
+        >
+
+        <nz-list [nzDataSource]="data" [nzRenderItem]="item" [nzItemLayout]="'horizontal'" [nzLoading]="loading">
+            <ng-template #item let-item>
+              <nz-list-item>
+                <nz-list-item-meta
+                  [nzTitle]="nzTitle"
+                  nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                  nzDescription="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                >
+                  <ng-template #nzTitle>
+                    <strong>{{ item.title }}</strong>                    
+                  </ng-template>
+                </nz-list-item-meta>
+              </nz-list-item>
+            </ng-template>
+          </nz-list>
+
+
+        </nz-drawer>
+
   </nz-layout>
+
+
 
 
 
