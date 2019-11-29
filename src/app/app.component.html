@@ -3,58 +3,46 @@
             <div class="logo">
               
               <div class="marca">
-                <a href=""> <img src="../assets/yk.png" alt=""> </a>              
+                <!-- <a href=""> <img src="../assets/yk.png" alt=""> </a>               -->
               </div>
 
               <div class="redes">
 
-                <a class="raise" style="padding-left: 25px;" href="" nzTooltipTitle="instagram" nzTooltipPlacement="topLeft" nz-tooltip><i class="icono" nz-icon nzType="instagram"></i></a>
+                <!-- <a class="raise" style="padding-left: 25px;" href="" nzTooltipTitle="instagram" nzTooltipPlacement="topLeft" nz-tooltip><i class="icono" nz-icon nzType="instagram"></i></a>
 
                 <a class="raise" style="padding-left: 25px;" href=""  nzTooltipTitle="facebook" nzTooltipPlacement="topLeft" nz-tooltip> <i class="icono" nz-icon [nzIconfont]="'icon-facebook'"></i> </a>   
 
-                <a class="raise" style="padding-left: 25px;" nzTooltipTitle="dejame tu comentario" nzTooltipPlacement="topLeft" nz-tooltip (click)="showModal()"> <i class="icono" nz-icon nzType="mail" nzTheme="fill"></i> </a>         
+                <a class="raise" style="padding-left: 25px;" nzTooltipTitle="dejame tu comentario" nzTooltipPlacement="topLeft" nz-tooltip (click)="showModal()"> <i class="icono" nz-icon nzType="mail" nzTheme="fill"></i> </a>          -->
            
               </div>
 
             </div>
 
-            <div class="menu" > 
-              
-                <ul class="lista" nz-menu nzMode="horizontal">
-                    <li nz-menu-item >
-                      <i nz-icon nzType="fire"></i>
-                      <strong>Todos</strong>                      
-                    </li>  
-                    
-                    <li nz-menu-item >
-                      <i nz-icon nzType="smile"></i>
-                      <strong>Trenzas</strong>    
-                    </li>    
+            <div class="navbar" > 
 
-                    <li nz-menu-item >
-                      <i nz-icon nzType="alert"></i>
-                      <strong>Colores</strong>    
-                    </li>    
-
-                    <li nz-menu-item >
-                      <i nz-icon nzType="like"></i>
-                      <strong>Favoritos</strong>    
-                    </li>    
-
-                    <li nz-menu-item  (click)="open()">
-                        <i nz-icon nzType="message"></i>
-                        <strong>Comentarios</strong>                      
-                    </li> 
-           
+                <ul id="menu">
+                    <li><a href="#">Todos</a></li>      
+                    <li><a href="#">Trenzas</a></li>
+                    <li><a href="#">Colores</a></li>
+                    <li><a href="#">Peinados</a></li>
+                    <li><a href="#">Favoritos</a></li>
+                    <li><a href="#">Acerca de mi</a></li>                 
                 </ul>
-
             </div>
 
         </div>
 
         <div class="contenido">
 
-            <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
+          <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
+            <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+            <nz-rate [ngModel]="0"></nz-rate>
+          </nz-card>
+          <ng-template #coverTemplate>
+            <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
+          </ng-template>
+
+          <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
               <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
               <nz-rate [ngModel]="0"></nz-rate>
             </nz-card>
@@ -62,108 +50,87 @@
               <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
             </ng-template>
 
-            <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
-                <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
-                <nz-rate [ngModel]="0"></nz-rate>
-              </nz-card>
-              <ng-template #coverTemplate>
-                <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
-              </ng-template>
+              
+          <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
+              <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+              <nz-rate [ngModel]="0"></nz-rate>
+            </nz-card>
+            <ng-template #coverTemplate>
+              <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
+            </ng-template>
+
+          
+          <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
+              <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+              <nz-rate [ngModel]="0"></nz-rate>
+            </nz-card>
+            <ng-template #coverTemplate>
+              <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
+            </ng-template>
 
               
-              <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
-                  <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
-                  <nz-rate [ngModel]="0"></nz-rate>
-                </nz-card>
-                <ng-template #coverTemplate>
-                  <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
-                </ng-template>
+          <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
+              <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+              <nz-rate [ngModel]="0"></nz-rate>
+            </nz-card>
+            <ng-template #coverTemplate>
+              <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
+            </ng-template>
 
                 
-                <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
-                    <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
-                    <nz-rate [ngModel]="0"></nz-rate>
-                  </nz-card>
-                  <ng-template #coverTemplate>
-                    <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
-                  </ng-template>
-
-                  
-                  <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
-                      <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
-                      <nz-rate [ngModel]="0"></nz-rate>
-                    </nz-card>
-                    <ng-template #coverTemplate>
-                      <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
-                    </ng-template>
-
-                    
-                    <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
-                        <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
-                        <nz-rate [ngModel]="0"></nz-rate>
-                      </nz-card>
-                      <ng-template #coverTemplate>
-                        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
-                      </ng-template>
+          <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
+              <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+              <nz-rate [ngModel]="0"></nz-rate>
+            </nz-card>
+            <ng-template #coverTemplate>
+              <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
+            </ng-template>
 
                       
-                      <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
-                          <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
-                          <nz-rate [ngModel]="0"></nz-rate>
-                        </nz-card>
-                        <ng-template #coverTemplate>
-                          <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
-                        </ng-template>
-            
+          <nz-card nzHoverable style="width:240px; padding-top: 20px;" [nzCover]="coverTemplate">
+              <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+              <nz-rate [ngModel]="0"></nz-rate>
+            </nz-card>
+            <ng-template #coverTemplate>
+              <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />              
+            </ng-template>
+
            
                      
+        </div>
+
+        <div class="comentario">
+            <nz-list *ngIf="data.length" [nzDataSource]="data" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
+                <ng-template #item let-item>
+                  <nz-comment [nzAuthor]="item.author" [nzDatetime]="item.displayTime">
+                    <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]="item.avatar"></nz-avatar>
+                    <nz-comment-content>
+                      <p>{{ item.content }}</p>
+                    </nz-comment-content>
+                  </nz-comment>
+                </ng-template>
+              </nz-list>
+              <nz-comment>
+                <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]="user.avatar"></nz-avatar>
+                <nz-comment-content>
+                  <nz-form-item>
+                    <textarea [(ngModel)]="inputValue" nz-input rows="4"></textarea>
+                  </nz-form-item>
+                  <nz-form-item>
+                    <button nz-button nzType="primary" [nzLoading]="submitting" [disabled]="!inputValue" (click)="handleSubmit()">
+                      Add Comment
+                    </button>
+                  </nz-form-item>
+                </nz-comment-content>
+              </nz-comment>
+
         </div>
 
         <nz-back-top></nz-back-top>
      
         <div class="footer">
-         © 2019 Copyright carlos yk
-                     
+         © 2019 Copyright carlos yk                     
         </div>
-
-        <nz-modal [(nzVisible)]="isVisible" nzTitle="Comentario" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
-            <nz-comment>
-                <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]="user.avatar"></nz-avatar>
-                <nz-comment-content>
-                  <nz-form-item>
-                    <textarea  nz-input rows="4"></textarea>
-                  </nz-form-item>             
-                </nz-comment-content>
-              </nz-comment>
-          </nz-modal>
-
-
-          <nz-drawer
-          [nzClosable]="false"
-          [nzVisible]="visible"
-          [nzPlacement]="placement"
-          nzTitle="Comentarios"
-          (nzOnClose)="close()"
-        >
-
-        <nz-list [nzDataSource]="data" [nzRenderItem]="item" [nzItemLayout]="'horizontal'" [nzLoading]="loading">
-            <ng-template #item let-item>
-              <nz-list-item>
-                <nz-list-item-meta
-                  [nzTitle]="nzTitle"
-                  nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                  nzDescription="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                >
-                  <ng-template #nzTitle>
-                    <strong>{{ item.title }}</strong>                    
-                  </ng-template>
-                </nz-list-item-meta>
-              </nz-list-item>
-            </ng-template>
-          </nz-list>
-
-
-        </nz-drawer>
 
   </nz-layout>
 

@@ -10,8 +10,15 @@ import { addDays, distanceInWords } from 'date-fns';
 export class AppComponent {
   title = 'ctpzorro';
 
-  isVisible = false;
-  visible = false;
+  data: any[] = [];
+  submitting = false;
+  user = {
+    author: 'Han Solo',
+    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
+  };
+  inputValue = '';
+
+
 
   constructor(private iconService: NzIconService) {
     this.iconService.fetchFromIconfont({
@@ -19,59 +26,30 @@ export class AppComponent {
     });
   }  
 
-  showModal(): void {
-    this.isVisible = true;
+  handleSubmit(): void {
+    this.submitting = true;
+    const content = this.inputValue;
+    this.inputValue = '';
+    setTimeout(() => {
+      this.submitting = false;
+      this.data = [
+        ...this.data,
+        {
+          ...this.user,
+          content,
+          datetime: new Date(),
+          displayTime: distanceInWords(new Date(), new Date())
+        }
+      ].map(e => {
+        return {
+          ...e,
+          displayTime: distanceInWords(new Date(), e.datetime)
+        };
+      });
+    }, 800);
   }
 
-  handleOk(): void {
-    console.log('Button ok clicked!');
-    this.isVisible = false;
-  }
 
-  handleCancel(): void {
-    console.log('Button cancel clicked!');
-    this.isVisible = false;
-  }
-
-
-  placement = 'right';
-  open(): void {
-    this.visible = true;
-  }
-
-  close(): void {
-    this.visible = false;
-  }
-
-
-  data = [
-    {
-      title: 'Ant Design Title 1'
-    },
-    {
-      title: 'Ant Design Title 2'
-    },
-    {
-      title: 'Ant Design Title 3'
-    },
-    {
-      title: 'Ant Design Title 4'
-    },
-    {
-      title: 'Ant Design Title 4'
-    },
-    {
-      title: 'Ant Design Title 4'
-    },
-    {
-      title: 'Ant Design Title 4'
-    }
-  ];
-
-  user = {
-    author: 'Han Solo',
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
-  };
 
 
 }
